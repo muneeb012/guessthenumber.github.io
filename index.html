@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+    function guessthenumber(){
+//Generate the random number
+const number=Math.floor(Math.random()*10)
+//taking input from user
+let answer=prompt("Guess the number form 0to10")
+answer=Number.parseInt(answer);
+  //score
+  let score = 100;
+  let attempt=0
+// taking input till the value=number
+  while(answer!=number){
+    alert("Try Again")
+    score-=10
+    attempt+=1
+     answer=prompt("Guess to number form 0to10")
+    
+  }// if number = answer than they exicute
+if(number==answer){
+  document.write("Well Done",number)
+  document.write("Your Score is ",score)
+   document.write("Attempts",attempt)
+  }
+}
+
+  guessthenumber()
+
+
+</script>
+
+</body>
+</html>
